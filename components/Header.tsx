@@ -35,7 +35,7 @@ export default function Header() {
           <Link href={"/"} className="flex items-center mr-2 sm:mr-4">
             {theme.brand.logo !== null && contractInfo?.image && (
               <Image
-                src={theme.brand.logo || contractInfo?.image}
+                src={'https://pioneers.dev/coins/pioneerMan.png'}
                 height={90}
                 width={90}
                 style={{ height: theme.styles.logoHeight }}
@@ -49,7 +49,7 @@ export default function Header() {
                   !onlyTitle && "hidden sm:block"
                 } `}
               >
-                {theme.brand.title || contractInfo?.name}
+                Become a Pioneer
               </div>
             )}
           </Link>

@@ -1,18 +1,17 @@
 const IPFS_GATEWAY =
-  process.env.NEXT_PUBLIC_IPFS_GATEWAY || "https://gateway.pinata.cloud";
+    process.env.NEXT_PUBLIC_IPFS_GATEWAY || "https://gateway.pinata.cloud";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [IPFS_GATEWAY.replace("https://", "")],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "api.zora.co",
+        hostname: "**", // Wildcard for any hostname
         port: "",
-        pathname: "/renderer/**",
+        pathname: "**", // Wildcard for any pathname
       },
     ],
   },
